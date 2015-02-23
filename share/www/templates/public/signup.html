@@ -3,9 +3,9 @@
 		<div class="main-container col col-90">
 			<div class="logo"></div>
 			<div class="title-container">
-				Sign In
+				Sign Up
 			</div>
-			<form ng-submit="signin()">
+			<form ng-submit="signup()">
 				<div class="form-container list">
 					<label class="item item-input">
 						<input type="email" placeholder="Email Address" ng-model="user.email" required>
@@ -13,14 +13,12 @@
 					<label class="item item-input">
 						<input type="password" placeholder="Password" ng-model="user.password" required>
 					</label>
+					<label class="item item-input">
+						<input type="password" placeholder="Confirm Password" ng-model="user.cfmPassword" required>
+					</label>
 				</div>
-				<button type="submit" class="button button-block button-positive">Sign In</button>
+				<button type="submit" class="button button-block button-positive">Sign Up</button>
 			</form>
-			<hr>
-			<div class="link-container">
-				<a class="sign-up link-small" ui-sref="public.signup">Sign Up</a>
-				<a class="forgot-pwd link-small" ui-sref="public.forgotPassword">Forgot password?</a>
-			</div>
 		</div>
 	</ion-content>
 </ion-view>

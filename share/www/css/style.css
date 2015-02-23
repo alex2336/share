@@ -1,1 +1,18 @@
-/* Empty. Add your own CSS if you like */
+.prelogin {
+  background-color: #4fb4fa; }
+  .prelogin .main-container {
+    margin: 0 auto;
+    text-align: center; }
+    .prelogin .main-container .title-container {
+      margin-top: 5px;
+      font-size: 28px;
+      line-height: 36px;
+      font-weight: 700; }
+
+.sign-up {
+  float: left; }
+
+.forgot-pwd {
+  float: right; }
+
+/*# sourceMappingURL=style.css.map */

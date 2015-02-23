@@ -65,6 +65,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
           access: "public"
         }
       })
+      .state('public.signup', {
+        url: "/signup",
+        views: {
+          'main-content': {
+            templateUrl: "templates/public/signup.html",
+            controller: 'SignUpCtrl'
+          }
+        },
+        data: {
+          access: "public"
+        }
+      })
       // setup an abstract state for the tabs directive
       .state('tab', {
         url: "/tab",
@@ -84,10 +96,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     })
 
-    .state('tab.chats', {
-        url: '/chats',
+    .state('tab.groups', {
+        url: '/groups',
         views: {
-          'tab-chats': {
+          'tab-groups': {
             templateUrl: 'templates/tab-groups.html',
             controller: 'ChatsCtrl'
           }
@@ -133,6 +145,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     });
 
     // if none of the above states are matched, use this as the fallback
-    //$urlRouterProvider.otherwise('/tab/dash');
+    $urlRouterProvider.otherwise('/public/signin');
 
   });
