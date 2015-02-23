@@ -3,9 +3,9 @@
 		<div class="main-container col col-90">
 			<div class="logo"></div>
 			<div class="title-container">
-				Sign In
+				Sign In {{a}}
 			</div>
-			<form action-submit="signin()" parsley="true">
+			<form ng-submit="signin()">
 				<div class="form-container list">
 					<label class="item item-input">
 						<input type="email" placeholder="Email Address" ng-model="user.email" required>
