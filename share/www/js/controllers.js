@@ -2,11 +2,20 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+.controller('GroupCtrl', function($scope, Chats, $ionicModal) {
+  $scope.showGroupModal = function() {
+    $ionicModal.fromTemplateUrl('templates/group-template.html', {
+        scope: $scope,
+        animation: 'slide-in-up',
+        backdropClickToClose: false,
+        hardwareBackButtonClose: false
+      })
+      .then(function(modal) {
+        $scope.modal = modal;
+        $scope.modal.show();
+      });
   }
+
 })
 
 .controller('SignInCtrl', function($scope, $stateParams, Chats, $ionicPopup, $ionicLoading, $state, UserService) {
